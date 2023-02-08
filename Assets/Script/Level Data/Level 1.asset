@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffc256dd817022b4b85c633b6fe5e0c3, type: 3}
+  m_Name: Level 1
+  m_EditorClassIdentifier: 
+  veganNumers: 2
+  bowlImage:
+  - {fileID: 6204906857253293575, guid: 6d86e780e577d824295368e64b868552, type: 3}
+  - {fileID: 4289080721327036678, guid: 7685e8a98bbee354685baa23e01707dc, type: 3}
+  iconSprite:
+  - {fileID: -606291525, guid: f7e1e1dcb946f334ab57d88eed8efd1d, type: 3}
+  - {fileID: 1360128595, guid: f7e1e1dcb946f334ab57d88eed8efd1d, type: 3}
+  colors:
+  - {r: 1, g: 0.5882353, b: 0.25882354, a: 1}
+  - {r: 0.9058824, g: 0.34509805, b: 0.31764707, a: 1}

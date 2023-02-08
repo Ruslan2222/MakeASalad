@@ -13,14 +13,14 @@ public class VegetablesSpawn : MonoBehaviour
     [Space]
     [SerializeField] private GameObject[] _vegans;
 
-    private UI _gameUI;
+    private Vector3 spawnPoint;
 
     private void Awake()
     {
-        _gameUI = FindObjectOfType<UI>();
         _buttons[0].onClick.AddListener(SpawnCarrot);
         _buttons[1].onClick.AddListener(SpawnTomato);
         _buttons[2].onClick.AddListener(SpawnCucumber);
+        spawnPoint = new Vector3(-0.338f, 2.4f, -2.89f);
     }
 
     private void Start()
@@ -32,21 +32,24 @@ public class VegetablesSpawn : MonoBehaviour
     {
         HapticPatterns.PlayPreset(HapticPatterns.PresetType.Selection);
         ButtonAnim("TakeOut");
-        Instantiate(_vegans[0], new Vector3(-1f, 2.31f, -2.6f), Quaternion.Euler(new Vector3(-12, -111, 0)));
+        GameObject vegan = Instantiate(_vegans[0], spawnPoint, Quaternion.Euler(new Vector3(-12, -120, 0)));
+        vegan.name = _vegans[0].name;
     }
 
     private void SpawnTomato()
     {
         HapticPatterns.PlayPreset(HapticPatterns.PresetType.Selection);
         ButtonAnim("TakeOut");
-        Instantiate(_vegans[1], new Vector3(-1f, 2.42f, -2.4f), Quaternion.Euler(new Vector3(-3.5f, -34, 86)));
+        GameObject vegan = Instantiate(_vegans[1], spawnPoint, Quaternion.Euler(new Vector3(-3.5f, -47, 86)));
+        vegan.name = _vegans[1].name;
     }
 
     private void SpawnCucumber()
     {
         HapticPatterns.PlayPreset(HapticPatterns.PresetType.Selection);
         ButtonAnim("TakeOut");
-        Instantiate(_vegans[2], new Vector3(-1f, 2.4f, -2.57f), Quaternion.Euler(new Vector3(-11.52f, -110, -8.5f)));
+        GameObject vegan = Instantiate(_vegans[2], spawnPoint, Quaternion.Euler(new Vector3(-11.52f, -110, -8.5f)));
+        vegan.name = _vegans[2].name;
     }
 
     public void ButtonAnim(string moveAnim)

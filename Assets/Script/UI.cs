@@ -10,19 +10,13 @@ public class UI : MonoBehaviour
     [Space]
     [SerializeField] private GameObject _startPanel;
     [SerializeField] private Button _startButton;
-    [Space]
-    [SerializeField] private GameObject[] _goalBowlStart;
-    public GameObject[] goalBowlStart => _goalBowlStart;
 
     [Header("Game Panel")]
     [Space]
-    [SerializeField] private GameObject _gamePanel;
+    [SerializeField] private GameObject _gamePanel;    
     [SerializeField] private GameObject _spawnButtons;
     public GameObject spawnButtons => _spawnButtons;
     [SerializeField] private ParticleSystem _confetti;
-    [Space]
-    [SerializeField] private GameObject[] _goalBowlGame;
-    public GameObject[] goalBowlGame => _goalBowlGame;
 
 
     [Header("Win Panel")]
@@ -50,9 +44,10 @@ public class UI : MonoBehaviour
         GameObject bowl = GameObject.Find("Bowl");
         Instantiate(_confetti, new Vector3(0, 5.6f, 0), Quaternion.identity);
 
-        sequence.Append(grater.transform.DOMove(new Vector3(2.41f, 0, 5.85f), 3))
+        sequence.Append(grater.transform.DOMove(new Vector3(2.41f, 0.22f, 5.85f), 3))
                 .Insert(0, grater.transform.DORotate(new Vector3(0, -38.5f, -61.8f), 3))
-                .Insert(0, grater.transform.DOScale(new Vector3(0.236f, 0.236f, 0.236f), 3));
+                .Insert(0, grater.transform.DOScale(new Vector3(0.236f, 0.236f, 0.236f), 3))
+                .Insert(3, grater.transform.DOMoveY(0, 1));
 
         sequence.Append(bowl.transform.DOMove(new Vector3(0, 0.3f, -2.77f), 1))
                 .PrependInterval(0.2f)

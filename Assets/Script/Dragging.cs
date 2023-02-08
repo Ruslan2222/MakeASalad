@@ -17,7 +17,6 @@ public class Dragging : MonoBehaviour
     private void Update()
     {
         Vector3 v3;
-        
 
         if (Input.touchCount != 1)
         {
@@ -35,7 +34,7 @@ public class Dragging : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit))
             {
-                if (hit.collider.TryGetComponent(out Carrot carrot) || hit.collider.TryGetComponent(out Tomato tomato) || hit.collider.TryGetComponent(out Cucumber cucumber))
+                if (hit.collider.TryGetComponent(out Vegetables vegetables))
                 {
                     gameObjectHit = hit.collider.gameObject;
                     _toDrag = hit.transform;
@@ -45,7 +44,7 @@ public class Dragging : MonoBehaviour
                     _offset = _toDrag.position - v3;
                     _dragging = true;
                 }
-                else if (hit.collider.TryGetComponent(out Rubbing rubbing))
+                else if (hit.collider.gameObject.name == "GraterCollider")
                 {
                     StartCoroutine(WarningTap());
                 }

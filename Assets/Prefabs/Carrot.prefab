@@ -15,10 +15,10 @@ GameObject:
   - component: {fileID: 681730012386457138}
   - component: {fileID: 4129975945554959968}
   - component: {fileID: 4129975945554959969}
-  - component: {fileID: 7585707211953307274}
+  - component: {fileID: 7793543556404535942}
   m_Layer: 0
   m_Name: Carrot
-  m_TagString: Untagged
+  m_TagString: Vegan
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -116,8 +116,8 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
+  m_IsKinematic: 1
+  m_Interpolate: 2
   m_Constraints: 126
   m_CollisionDetection: 2
 --- !u!65 &4129975945554959968
@@ -131,8 +131,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.90819883, y: 0.90820014, z: 1.472575}
-  m_Center: {x: 0.0013318687, y: 0.0013922566, z: 1.5478306}
+  m_Size: {x: 0.90819883, y: 0.90820014, z: 1.333168}
+  m_Center: {x: 0.0013353766, y: 0.0013911285, z: 4.052066}
 --- !u!114 &4129975945554959969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 621b35dc22e51ee48a531bd7567a1903, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &7585707211953307274
+--- !u!114 &7793543556404535942
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -154,9 +154,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 411116212794772348}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0393f15d492424143803b7a5361108ec, type: 3}
+  m_Script: {fileID: 11500000, guid: 5c3a10b3d775fb040a3741f5b5bfac90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _chips: {fileID: 1840995934525169613, guid: 34de3aa2241e2ec4596924d685c03996, type: 3}
 --- !u!1001 &7847332022778456509
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -186,15 +187,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6597457995236893584, guid: 0fab622e736a3de409d09ddf388f1645, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.3
       objectReference: {fileID: 0}
     - target: {fileID: 6597457995236893584, guid: 0fab622e736a3de409d09ddf388f1645, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.74
       objectReference: {fileID: 0}
     - target: {fileID: 6597457995236893584, guid: 0fab622e736a3de409d09ddf388f1645, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 1.95
       objectReference: {fileID: 0}
     - target: {fileID: 6597457995236893584, guid: 0fab622e736a3de409d09ddf388f1645, type: 3}
       propertyPath: m_LocalRotation.w
