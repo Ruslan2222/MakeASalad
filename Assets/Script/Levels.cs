@@ -44,7 +44,7 @@ public class Levels : MonoBehaviour
             PlayerPrefs.SetInt("level", _level);
         }
 
-        if (_level > _levelDatas.Length)
+        if (_level > _levelDatas.Length - 1)
         {
             _level = GetRandomLevel();
         }
@@ -83,9 +83,13 @@ public class Levels : MonoBehaviour
 
         int lastLevel = PlayerPrefs.GetInt("level");
         if (index == lastLevel)
+        {
             return GetRandomLevel();
+        }
         else
+        {
             return index;
+        }
     }
 
     public void CheckGoal(string nameVegan)
